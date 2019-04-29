@@ -18,3 +18,25 @@ function beyond(num) {
 }
 
 console.log(beyond(-14));
+
+function decode(word) {
+  let words = word.split(" ");
+  let output = "";
+  for (let i=0;i<words.length;i++) {
+    if (words[i].substring(0,1) == 'a') {
+      output += words[i][1];
+    } else if (words[i].substring(0,1) == 'b') {
+      output += words[i][2];
+    } else if (words[i].substring(0,1) == 'c') {
+      output += words[i][3];
+    } else if (words[i].substring(0,1) == 'd') {
+      output += words[i][4];
+    } else {
+      output += ' ';
+    }
+  
+  }
+  return output;
+}
+
+console.log(decode('craft block argon meter bells brown croon droop'));
