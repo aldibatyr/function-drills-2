@@ -89,3 +89,25 @@ function daysInMonth(month, leapYear) {
 }
 
 console.log(daysInMonth('February', true));
+
+function rockPaperScissors(playerChoice) {
+  if (playerChoice < 1 || playerChoice > 3 || typeof(playerChoice) != 'number') {
+    return 'invalid input!';
+  }
+  console.log("player = " + playerChoice);
+  const randomNo = Math.floor(Math.random() * 3) + 1;
+  console.log("computer = " + randomNo);
+  if (playerChoice === 1 && randomNo === 3) {
+    return 'player wins!';
+  } else if (playerChoice === 2 && randomNo === 1) {
+    return 'player wins!';
+  } else if (playerChoice === 3 && randomNo === 2) {
+    return 'player wins!';
+  } else if (playerChoice === randomNo ) {
+    return 'tie!';
+  } else {
+    return 'computer wins!';
+  }
+}
+
+console.log(rockPaperScissors(3));
