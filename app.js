@@ -40,3 +40,52 @@ function decode(word) {
 }
 
 console.log(decode('craft block argon meter bells brown croon droop'));
+
+function daysInMonth(month, leapYear) {
+  switch(month) {
+    case 'January':
+      return 'January has 31 days';
+      break;
+    case 'February':
+      if (leapYear) {
+        return 'February has 29 days';
+      } else {
+        return 'February has 28 days';
+      }
+    break;
+    case 'March':
+      return 'March has 31 days';
+    break;
+    case 'April':
+      return 'April has 30 days';
+    break;
+    case 'May':
+      return 'May has 31 days';
+    break;
+    case 'June':
+      return 'June has 30 days';
+    break;
+    case 'July':
+      return 'July has 31 days';
+    break;
+    case 'August':
+      return 'August has 31 days';
+    break;
+    case 'September':
+      return 'September has 30 days';
+    break;
+    case 'October':
+      return 'October has 31 days';
+    break;
+    case 'November':
+     return 'November has 30 days';
+    break;
+    case 'December':
+     return 'December has 31 days';
+    break;
+    default:
+      return 'Invalid month';
+  }
+}
+
+console.log(daysInMonth('February', true));
